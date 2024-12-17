@@ -1,0 +1,147 @@
+# Translations template for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-12-17 21:48+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: apps/bot/models.py:48
+msgid "Car brand"
+msgstr ""
+
+#: apps/bot/models.py:49
+msgid "Model"
+msgstr ""
+
+#: apps/bot/models.py:51
+msgid "Color"
+msgstr ""
+
+#: apps/bot/handlers/commands.py:16
+msgid "Quyidagilardan birini tanlang"
+msgstr ""
+
+#: apps/bot/handlers/commands.py:22
+msgid ""
+"Available commands:\n"
+"/start - Start the bot\n"
+"/help - Get help"
+msgstr ""
+
+#: apps/bot/handlers/registration.py:19
+msgid "Telefon raqamingizni jo`nating"
+msgstr ""
+
+#: apps/bot/handlers/registration.py:27
+msgid "To`g`ri formatda raqam jo`nating yoki buttondan foydalaning"
+msgstr ""
+
+#: apps/bot/handlers/registration.py:31 apps/bot/handlers/registration.py:38
+msgid "Ismingizni jo`nating"
+msgstr ""
+
+#: apps/bot/handlers/registration.py:47
+msgid ""
+"Sizning ismingiz: {name}\n"
+"Telefon raqamingiz: {phone_number}\n"
+"Tiliz: {language}\n"
+"\n"
+"Sizning registratsiyani yakunlashingiz uchun tugmasini bosing"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:16
+msgid "🗞Yangi detektsiya yaratish."
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:18
+msgid "🔄Faol detektsiyalar"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:20
+msgid "⚙️Sozlamalar"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:45
+msgid "Muloqot tili"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:46
+msgid "Telefon"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:47
+msgid "Asosiy menu"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:59
+msgid "❌ Faolsizlantirish"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:64
+msgid "✅ Faol qilish"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:69
+msgid "🔧 Filtrlarni o'zgartirish"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:74
+msgid "📊 Hisobot"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:79
+msgid "🗑 O'chirish"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:93 apps/bot/keyboards/inline.py:102
+msgid "✅ Tanlashni tugatish"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:156
+msgid "0-10 ming km"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:157
+msgid "10-50 ming km"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:158
+msgid "50-100 ming km"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:159
+msgid "100 ming km+"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:163
+msgid "✅ Tamom"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:176
+msgid "🔎 Filtrlarni ishga tushrish"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:180
+msgid "Deteksiyani ishga tushurish"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:184
+msgid "Ortga"
+msgstr ""
+
+#: apps/bot/keyboards/inline.py:193
+msgid "🔙 Asosiy menu"
+msgstr ""
+

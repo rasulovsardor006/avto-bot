@@ -1,0 +1,155 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-12-17 21:48+0500\n"
+"PO-Revision-Date: 2024-12-17 21:48+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+#: apps/bot/models.py:48
+msgid "Car brand"
+msgstr "Марка автомобиля"
+
+#: apps/bot/models.py:49
+msgid "Model"
+msgstr "Модель"
+
+#: apps/bot/models.py:51
+msgid "Color"
+msgstr "Цвет"
+
+#: apps/bot/handlers/commands.py:16
+msgid "Quyidagilardan birini tanlang"
+msgstr "Выберите один из следующих"
+
+#: apps/bot/handlers/commands.py:22
+msgid ""
+"Available commands:\n"
+"/start - Start the bot\n"
+"/help - Get help"
+msgstr ""
+"Доступные команды:\n"
+"/start - Запустить бота\n"
+"/help - Получить помощь"
+
+#: apps/bot/handlers/registration.py:19
+msgid "Telefon raqamingizni jo`nating"
+msgstr "Отправьте свой номер телефона"
+
+#: apps/bot/handlers/registration.py:27
+msgid "To`g`ri formatda raqam jo`nating yoki buttondan foydalaning"
+msgstr "Отправьте номер в правильном формате или используйте кнопку"
+
+#: apps/bot/handlers/registration.py:31 apps/bot/handlers/registration.py:38
+msgid "Ismingizni jo`nating"
+msgstr "Отправьте своё имя"
+
+#: apps/bot/handlers/registration.py:47
+msgid ""
+"Sizning ismingiz: {name}\n"
+"Telefon raqamingiz: {phone_number}\n"
+"Tiliz: {language}\n"
+"\n"
+"Sizning registratsiyani yakunlashingiz uchun tugmasini bosing"
+msgstr ""
+"Ваше имя: {name}\n"
+"Ваш номер телефона: {phone_number}\n"
+"Ваш язык: {language}\n"
+"\n"
+"Нажмите кнопку, чтобы завершить регистрацию"
+
+#: apps/bot/keyboards/inline.py:16
+msgid "🗞Yangi detektsiya yaratish."
+msgstr "🗞Создать новое обнаружение."
+
+#: apps/bot/keyboards/inline.py:18
+msgid "🔄Faol detektsiyalar"
+msgstr "🔄Активные обнаружения"
+
+#: apps/bot/keyboards/inline.py:20
+msgid "⚙️Sozlamalar"
+msgstr "⚙️Настройки"
+
+#: apps/bot/keyboards/inline.py:45
+msgid "Muloqot tili"
+msgstr "Язык общения"
+
+#: apps/bot/keyboards/inline.py:46
+msgid "Telefon"
+msgstr "Телефон"
+
+#: apps/bot/keyboards/inline.py:47
+msgid "Asosiy menu"
+msgstr "Главное меню"
+
+#: apps/bot/keyboards/inline.py:59
+msgid "❌ Faolsizlantirish"
+msgstr "❌ Отключить"
+
+#: apps/bot/keyboards/inline.py:64
+msgid "✅ Faol qilish"
+msgstr "✅ Включить"
+
+#: apps/bot/keyboards/inline.py:69
+msgid "🔧 Filtrlarni o'zgartirish"
+msgstr "🔧 Изменить фильтры"
+
+#: apps/bot/keyboards/inline.py:74
+msgid "📊 Hisobot"
+msgstr "📊 Отчёт"
+
+#: apps/bot/keyboards/inline.py:79
+msgid "🗑 O'chirish"
+msgstr "🗑 Удалить"
+
+#: apps/bot/keyboards/inline.py:93 apps/bot/keyboards/inline.py:102
+msgid "✅ Tanlashni tugatish"
+msgstr "✅ Завершить выбор"
+
+#: apps/bot/keyboards/inline.py:156
+msgid "0-10 ming km"
+msgstr "0-10 тысяч км"
+
+#: apps/bot/keyboards/inline.py:157
+msgid "10-50 ming km"
+msgstr "10-50 тысяч км"
+
+#: apps/bot/keyboards/inline.py:158
+msgid "50-100 ming km"
+msgstr "50-100 тысяч км"
+
+#: apps/bot/keyboards/inline.py:159
+msgid "100 ming km+"
+msgstr "100 тысяч км+"
+
+#: apps/bot/keyboards/inline.py:163
+msgid "✅ Tamom"
+msgstr "✅ Готово"
+
+#: apps/bot/keyboards/inline.py:176
+msgid "🔎 Filtrlarni ishga tushrish"
+msgstr "🔎 Запустить фильтры"
+
+#: apps/bot/keyboards/inline.py:180
+msgid "Deteksiyani ishga tushurish"
+msgstr "Запустить обнаружение"
+
+#: apps/bot/keyboards/inline.py:184
+msgid "Ortga"
+msgstr "Назад"
+
+#: apps/bot/keyboards/inline.py:193
+msgid "🔙 Asosiy menu"
+msgstr "🔙 Главное меню"
