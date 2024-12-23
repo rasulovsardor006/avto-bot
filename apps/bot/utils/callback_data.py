@@ -28,7 +28,8 @@ class BackToMainMenuCallbackData(CallbackData, prefix='back_main_menu'):
 
 
 def cb_back_to_main_menu_callback_data(action: BackToMainMenuAction):
-    return BackToMainMenuCallbackData(action=action.value).pack()
+    return BackToMainMenuCallbackData(action=action).pack()
+
 
 
 class SelectLanguage(str, Enum):

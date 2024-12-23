@@ -1,12 +1,12 @@
 from aiogram import Router, types, F
 from aiogram.types import CallbackQuery
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from apps.bot.handlers.commands import start_command
+from django.core.cache import cache
 from apps.bot.models import User
-from apps.bot.keyboards.inline import inline_languages
+from apps.bot.keyboards.inline import inline_languages, inline_main_menu
 from apps.bot.utils.callback_data import (
     MainMenuCallbackData, MainMenuAction,
-    BackToMainMenuCallbackData, BackToMainMenuAction, cb_back_to_main_menu_callback_data,
+ BackToMainMenuAction, cb_back_to_main_menu_callback_data,
 )
 
 router = Router()
@@ -21,7 +21,7 @@ async def settings(callback_query: CallbackQuery):
     if not user_data:
         await callback_query.message.edit_text(
             "Iltimos avval ro'yxatdan o'ting \nTilni tanlang:",
-            reply_markup=inline_languages()  # inline_languages() tugmalari bilan til tanlash
+            reply_markup=inline_languages()
         )
         return
 
@@ -34,18 +34,18 @@ async def settings(callback_query: CallbackQuery):
         reply_markup=inline_settings()
     )
 
-
 def inline_settings():
     keyboard = InlineKeyboardBuilder()
     keyboard.button(text="🌐 Muloqot tili", callback_data="change_language")
-    keyboard.button(text="🏠 Asosiy menyu",
-                    callback_data=cb_back_to_main_menu_callback_data(
-                        action=BackToMainMenuAction.BACK).pack())  # pack() qo'shilgan
+    keyboard.button(
+        text="🏠 Asosiy menyu",
+        callback_data=cb_back_to_main_menu_callback_data(action=BackToMainMenuAction.BACK)
+    )
     keyboard.adjust(1)
     return keyboard.as_markup()
 
 
-def inline_languages():  # "inline_languages" nomi to'g'ri bo'lishi kerak
+def inline_languages():
     keyboard = InlineKeyboardBuilder()
     keyboard.button(text="🇺🇿 O'zbek", callback_data="set_language:uz")
     keyboard.button(text="🇷🇺 Русский", callback_data="set_language:ru")
@@ -58,26 +58,34 @@ def inline_languages():  # "inline_languages" nomi to'g'ri bo'lishi kerak
 async def change_language(callback_query: CallbackQuery):
     await callback_query.message.edit_text(
         "🌐 Tilni tanlang:",
-        reply_markup=inline_languages()  # inline_languages()ni chaqirish
+        reply_markup=inline_languages()
     )
 
 
-# Tilni o'zgartirish
 @router.callback_query(lambda c: c.data.startswith("set_language"))
 async def set_language(callback: CallbackQuery):
     language_code = callback.data.split(":")[1]
     user_id = callback.from_user.id
 
     user = await User.objects.filter(telegram_id=user_id).afirst()
+
     if not user:
-        await callback.answer("⚠️ Ro'yxatdan o'tmagansiz. Til tanlandi.", show_alert=True)
+        await callback.message.edit_text(
+            "Iltimos avval ro'yxatdan o'ting",
+            reply_markup=inline_main_menu()
+        )
         return
 
     user.language = language_code
     await user.asave()
 
+    cache_key = f"user_language_{user_id}"
+    cache.set(cache_key, language_code, timeout=3600)
+
     text = "✅ Til muvaffaqiyatli O'zbek tiliga o'zgartirildi." if language_code == "uz" else \
         "✅ Язык успешно изменён на Русский." if language_code == "ru" else \
             "✅ Language successfully changed to English."
-    await callback.message.edit_text(text=text,
-                                     reply_markup=inline_settings())  # inline_settings() bilan qayta tahrirlash
+
+    if callback.message.text != text:
+        await callback.message.edit_text(text=text,
+                                         reply_markup=inline_settings())
