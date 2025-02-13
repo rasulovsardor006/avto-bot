@@ -11,7 +11,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))  # .env faylini o'qish
 # SECURITY
 SECRET_KEY = env.str("SECRET_KEY")  # Yashirin kalit .env dan
 DEBUG = env.bool("DEBUG", default=False)  # DEBUG holati .env dan
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])  # ALLOWED_HOSTS .env dan
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=['*'])
 
 # Application definition
 INSTALLED_APPS = [
